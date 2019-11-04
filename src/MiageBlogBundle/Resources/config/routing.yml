@@ -1,0 +1,17 @@
+miage_blog_homepage:
+    path:     /
+    defaults: { _controller: MiageBlogBundle:Default:index }
+    
+    
+miage_blog_hometoi:
+    path: /hello/{toi}
+    defaults: {_controller: MiageBlogBundle:Default:hellotoi }
+
+    
+miage_blog_homemoi:
+    path: /hello/{annee}/{mois}/{toi}.{format}
+    defaults: {_controller: MiageBlogBundle:Default:hellomoi }
+    requirements:
+        annee : \d{4}
+        mois : \d{2}
+        format : html|htm|xml
